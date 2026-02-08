@@ -166,6 +166,70 @@ return {
             }
         },
     },
+    Planters = {
+        ["Pesticide Planter"] = {
+            Name = "Pesticide Planter",
+            Type = "planters",
+            Honey = 750000000,
+            Ingredients = {
+                ["Magic Bean"] = 25,
+                ["Neonberry"] = 25,
+                ["Glue"] = 15,
+                ["Caustic Wax"] = 3,
+                ["Hard Wax"] = 10
+            }
+        },
+        ["Heat-Treated Planter"] = {
+            Name = "Heat-Treated Planter",
+            Type = "planters",
+            Honey = 750000000000,
+            Ingredients = {
+                ["Magic Bean"] = 75,
+                ["Red Extract"] = 750,
+                ["Hard Wax"] = 150,
+                ["Swirled Wax"] = 25,
+                ["Turpentine"] = 1
+            }
+        },
+        ["Hydroponic Planter"] = {
+            Name = "Hydroponic Planter",
+            Type = "planters",
+            Honey = 750000000000,
+            Ingredients = {
+                ["Magic Bean"] = 75,
+                ["Blue Extract"] = 750,
+                ["Soft Wax"] = 500,
+                ["Caustic Wax"] = 25,
+                ["Turpentine"] = 1
+            }
+        },
+        ["Petal Planter"] = {
+            Name = "Petal Planter",
+            Type = "planters",
+            Honey = 5000000000000,
+            Ingredients = {
+                ["Magic Bean"] = 100,
+                ["Glitter"] = 100,
+                ["Soft Wax"] = 250,
+                ["Swirled Wax"] = 50,
+                ["Turpentine"] = 1,
+                ["Super Smoothie"] = 25
+            }
+        },
+        ["The Planter Of Plenty"] = {
+            Name = "The Planter Of Plenty",
+            Type = "planters",
+            Honey = 100000000000000, -- 100t
+            Ingredients = {
+                ["Magic Bean"] = 500,
+                ["Glitter"] = 100,
+                ["Swirled Wax"] = 100,
+                ["Caustic Wax"] = 100,
+                ["Turpentine"] = 25,
+                ["Super Smoothie"] = 100
+            }
+        }
+    },
 
     Blender = {
         ["Blue Extract"] = {
