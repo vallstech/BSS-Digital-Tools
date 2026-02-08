@@ -12,6 +12,7 @@ local CONFIG = {
         showprice = true,
         left = true,
         nodesTransparency = 95,
+        nodeSeparators = false,
         webhook = "",
         autoSave = false
     },
@@ -39,7 +40,8 @@ tabs.items.headers = {
     tools = tabs.items.tab:CollapsingHeader({Title = "⚒️ Tools"}),
     bags = tabs.items.tab:CollapsingHeader({Title = "🎒 Bags"}),
     belts = tabs.items.tab:CollapsingHeader({Title = "🎗 Belts"}),
-    boots = tabs.items.tab:CollapsingHeader({Title = "👢 Boots"})
+    boots = tabs.items.tab:CollapsingHeader({Title = "👢 Boots"}),
+    planters = tabs.items.tab:CollapsingHeader({Title = "🌱 Planters"}),
 };
 tabs.webhook.headers = {
     general = tabs.webhook.tab:CollapsingHeader({Title = "General", Open = true})
@@ -98,6 +100,11 @@ function funcs.makeNodeCute(node)
     node.ChildContainer.BackgroundTransparency = CONFIG.settings.nodesTransparency / 100;
     node.ChildContainer.BackgroundColor3 = Color3.fromRGB(66, 150, 250);
 end
+function funcs.nodeSeparator(parent)
+    if CONFIG.settings.nodeSeparators then
+        parent:Separator();
+    end
+end
 
 -- MAIN UI FUNCTIONS
 local uiFuncs = {};
@@ -130,6 +137,7 @@ function uiFuncs.createCraft(parent, item: table) -- item = {Name, Count}
             if craftCount >= ingValue*dif then label.TextColor3 = Color3.fromRGB(0, 255, 0) end;
             uiFuncs.createCraft(craftNode, {Name = ingName, Count = ingValue*dif});
             uiFuncs.createPrice(craftNode, {Name = ingName, Count = ingValue*dif});
+            funcs.nodeSeparator(craftNode);
         end 
     end
 end
@@ -145,6 +153,7 @@ function uiFuncs.createIngredients(parent, item: table): nil
         if itemCount >= ingValue then label.TextColor3 = Color3.fromRGB(0, 255, 0) end;
         uiFuncs.createCraft(node, {Name = ingName, Count = ingValue});
         uiFuncs.createPrice(node, {Name = ingName, Count = ingValue});
+        funcs.nodeSeparator(node);
     end
 end
 function uiFuncs.createItem(item: table): nil
@@ -182,6 +191,7 @@ function uiFuncs.updateUi()
     for _, v in ITEMS.Bags do table.insert(uis, uiFuncs.createItem(v)) end
     for _, v in ITEMS.Belts do table.insert(uis, uiFuncs.createItem(v)) end
     for _, v in ITEMS.Boots do table.insert(uis, uiFuncs.createItem(v)) end
+    for _, v in ITEMS.Planters do table.insert(uis, uiFuncs.createItem(v)) end
 end
 
 function uiFuncs.createSettings()
@@ -222,6 +232,13 @@ function uiFuncs.createSettings()
             CONFIG.funcs.autoSaveConfig();
         end
     })
+    general:Checkbox({
+    	Label = "Node Separators", Value = CONFIG.settings.nodeSeparators,
+    	Callback = function(self, Value)
+    		CONFIG.settings.nodeSeparators = Value;
+            CONFIG.funcs.autoSaveConfig()
+    	end,
+    });
     
     -- config header
     configHeader:Checkbox({
