@@ -15,5 +15,5 @@ The script automates complex calculations related to acquiring in-game items:
 
 ## Script
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KOTONATO/BSS-Digital-Tools/refs/heads/main/src/info.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KOTONATO/BSS-Digital-Tools/refs/heads/main/src/main.luau"))()
 ```
