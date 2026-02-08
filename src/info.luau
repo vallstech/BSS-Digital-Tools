@@ -265,6 +265,10 @@ return {
             ["Honeysuckle"] = 1000
         }
     },
+    CurrencyIcons = {
+        ["Honey"] = "🍯",
+        ["Ticket"] = "🎟️"
+    },
     Shops = {
         ["Royal Jelly"] = {
             Price = 1000000,
@@ -281,7 +285,7 @@ return {
             Count = 1,
             Currency = "Honey"
         },
-        
+
         ["Magic Bean"] = {
             Price = 20,
             Count = 1,
