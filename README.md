@@ -7,7 +7,7 @@ Specialized script for **Bee Swarm Simulator** developed for purchase calculatio
 ## Script
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KOTONATO/BSS-Digital-Tools/refs/heads/main/src/main.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vallstech/BSS-Digital-Tools/refs/heads/main/src/main.luau"))()
 ```
 
 
