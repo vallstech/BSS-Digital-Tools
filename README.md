@@ -2,7 +2,7 @@
 
 Specialized script for **Bee Swarm Simulator** developed for purchase calculations.
 
-<img src="idk/icon.png" alt="Alt text" width="125" height="125"> <img src="idk/icon.png" alt="Alt text" width="125" height="125"> <img src="idk/icon.png" alt="Alt text" width="125" height="125"> <img src="idk/icon.png" alt="Alt text" width="125" height="125">
+<img src="idk/digitalsmall.png" alt="digital bee face" width="125" height="125"> <img src="idk/digitalsmall.png" alt="digital bee face" width="125" height="125"> <img src="idk/digitalsmall.png" alt="digital bee face" width="125" height="125"> <img src="idk/digitalsmall.png" alt="digital bee face" width="125" height="125">
 
 ## Script
 
@@ -15,6 +15,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/vallstech/BSS-Digital
 The script automates complex calculations related to acquiring in-game items:
 *   **Calculating total purchase cost** in honey and tickets.
 *   **Counting required materials** (berries, treats, pheromones, etc.) for crafting.
+
+<img src="idk/preview.png" alt="preview" width="400" height="350">
 
 ## Advantages
 *   **Time-saving:** No more manual calculations with a calculator.
